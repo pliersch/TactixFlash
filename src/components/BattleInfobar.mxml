@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<comp:BattleInfobar xmlns:comp="base.*" xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:custom="components.*" 
+	width="1024" height="134" backgroundColor="#000000">
+	<mx:ViewStack id="viewstack1" width="379" height="84" x="327" y="10">
+		<mx:Canvas id="bgBlau">
+		<mx:Image source="../media/hq/mainConsole.png" width="956" height="349" x="-260" y="-107">
+		</mx:Image>
+		</mx:Canvas>
+		<mx:Canvas id="bgRot">
+		<mx:Image source="../media/hq/KonsoleBGRed.png">
+		</mx:Image>
+		</mx:Canvas>
+		<mx:Canvas id="bgGruen">
+		<mx:Image source="../media/hq/KonsoleBGGruen.png">
+		</mx:Image>
+		</mx:Canvas>
+		<mx:Canvas id="bgGelb">
+		<mx:Image source="../media/hq/KonsoleBGGelb.png">
+		</mx:Image>
+		</mx:Canvas>
+	</mx:ViewStack>
+</comp:BattleInfobar>

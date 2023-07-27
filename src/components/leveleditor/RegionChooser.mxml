@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 creationComplete="init(event)">
+	<fx:Declarations>
+		<!-- Platzieren Sie nichtvisuelle Elemente (z. B. Dienste, Wertobjekte) hier -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			private function init(e:FlexEvent):void {
+				na0.addEventListener(MouseEvent.CLICK,clickNA0);
+				na1.addEventListener(MouseEvent.CLICK,clickNA1);
+				na2.addEventListener(MouseEvent.CLICK,clickNA2);
+				na3.addEventListener(MouseEvent.CLICK,clickNA3);
+				na4.addEventListener(MouseEvent.CLICK,clickNA4);
+				na5.addEventListener(MouseEvent.CLICK,clickNA5);
+				sa0.addEventListener(MouseEvent.CLICK,clickSA0);
+				sa1.addEventListener(MouseEvent.CLICK,clickSA1);
+				sa2.addEventListener(MouseEvent.CLICK,clickSA2);
+				af0.addEventListener(MouseEvent.CLICK,clickAF0);
+				af1.addEventListener(MouseEvent.CLICK,clickAF1);
+				af2.addEventListener(MouseEvent.CLICK,clickAF2);
+				af3.addEventListener(MouseEvent.CLICK,clickAF3);
+				af4.addEventListener(MouseEvent.CLICK,clickAF4);
+				eu0.addEventListener(MouseEvent.CLICK,clickEU0);
+				eu1.addEventListener(MouseEvent.CLICK,clickEU1);
+				as0.addEventListener(MouseEvent.CLICK,clickAS0);
+				as1.addEventListener(MouseEvent.CLICK,clickAS1);
+				as2.addEventListener(MouseEvent.CLICK,clickAS2);
+				as3.addEventListener(MouseEvent.CLICK,clickAS3);
+				as4.addEventListener(MouseEvent.CLICK,clickAS4);
+				as5.addEventListener(MouseEvent.CLICK,clickAS5);
+				as6.addEventListener(MouseEvent.CLICK,clickAS6);
+				as7.addEventListener(MouseEvent.CLICK,clickAS7);
+				as8.addEventListener(MouseEvent.CLICK,clickAS8);
+				aus0.addEventListener(MouseEvent.CLICK,clickAUS0);
+				aus1.addEventListener(MouseEvent.CLICK,clickAUS1);
+				aus2.addEventListener(MouseEvent.CLICK,clickAUS2);
+				
+			}
+			private function clickNA0(e:MouseEvent):void{
+				dispatchEvent(new Event("openNA0",true));
+			}
+			private function clickNA1(e:MouseEvent):void{
+				dispatchEvent(new Event("openNA1",true));
+			}
+			private function clickNA2(e:MouseEvent):void{
+				dispatchEvent(new Event("openNA2",true));
+			}
+			private function clickNA3(e:MouseEvent):void{
+				dispatchEvent(new Event("openNA3",true));
+			}
+			private function clickNA4(e:MouseEvent):void{
+				dispatchEvent(new Event("openNA4",true));
+			}
+			private function clickNA5(e:MouseEvent):void{
+				dispatchEvent(new Event("openNA5",true));
+			}
+			private function clickSA0(e:MouseEvent):void{
+				dispatchEvent(new Event("openSA0",true));
+			}
+			private function clickSA1(e:MouseEvent):void{
+				dispatchEvent(new Event("openSA1",true));
+			}
+			private function clickSA2(e:MouseEvent):void{
+				dispatchEvent(new Event("openSA2",true));
+			}
+			private function clickAF0(e:MouseEvent):void{
+				dispatchEvent(new Event("openAF0",true));
+			}
+			private function clickAF1(e:MouseEvent):void{
+				dispatchEvent(new Event("openAF1",true));
+			}
+			private function clickAF2(e:MouseEvent):void{
+				dispatchEvent(new Event("openAF2",true));
+			}
+			private function clickAF3(e:MouseEvent):void{
+				dispatchEvent(new Event("openAF3",true));
+			}
+			private function clickAF4(e:MouseEvent):void{
+				dispatchEvent(new Event("openAF4",true));
+			}
+			private function clickEU0(e:MouseEvent):void{
+				dispatchEvent(new Event("openEU0",true));
+			}
+			private function clickEU1(e:MouseEvent):void{
+				dispatchEvent(new Event("openEU1",true));
+			}
+			private function clickAS0(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS0",true));
+			}
+			private function clickAS1(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS1",true));
+			}
+			private function clickAS2(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS2",true));
+			}
+			private function clickAS3(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS3",true));
+			}
+			private function clickAS4(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS4",true));
+			}
+			private function clickAS5(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS5",true));
+			}
+			private function clickAS6(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS6",true));
+			}
+			private function clickAS7(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS7",true));
+			}
+			private function clickAS8(e:MouseEvent):void{
+				dispatchEvent(new Event("openAS8",true));
+			}
+			private function clickAUS0(e:MouseEvent):void{
+				dispatchEvent(new Event("openAUS0",true));
+			}
+			private function clickAUS1(e:MouseEvent):void{
+				dispatchEvent(new Event("openAUS1",true));
+			}
+			private function clickAUS2(e:MouseEvent):void{
+				dispatchEvent(new Event("openAUS2",true));
+			}
+		]]>
+	</fx:Script>
+	<mx:Image source="../media/leveleditor/worldMini.png"/>
+	<s:Label x="14.8" y="11.6" height="6" width="6" id="na0" fontSize="6" buttonMode="true"/>
+	<s:Label x="43.8" y="10" height="6" width="6" id="na1"  fontSize="6"  buttonMode="true"/>
+	<s:Label x="69.2" y="6" height="6" width="6" id="na2" fontSize="6"  buttonMode="true"/>
+	<s:Label x="49.4" y="20.6" height="6" width="6" id="na3" fontSize="6"  buttonMode="true"/>
+	<s:Label x="31.55" y="25.6" height="6" width="6" id="na4" fontSize="6"  buttonMode="true"/>
+	<s:Label x="19" y="36.8" height="6" width="6" id="na5" fontSize="6" buttonMode="true"/>
+	<s:Label x="39" y="54.4" height="6" width="6" id="sa0" fontSize="6"  buttonMode="true"/>
+	<s:Label x="58.8" y="65.2" height="6" width="6" id="sa1" fontSize="6"  buttonMode="true"/>
+	<s:Label x="46.8" y="82" height="6" width="6" id="sa2" fontSize="6"  buttonMode="true"/>
+	<s:Label x="97.8" y="39" height="6" width="6" id="af0" fontSize="6"  buttonMode="true"/>
+	<s:Label x="79.6" y="48.4" height="6" width="6" id="af1" fontSize="6"  buttonMode="true"/>
+	<s:Label x="114.4" y="53.8" height="6" width="6" id="af2" fontSize="6"  buttonMode="true"/>
+	<s:Label x="97.6" y="63.8" height="6" width="6" id="af3" fontSize="6"  buttonMode="true"/>
+	<s:Label x="104.2" y="79.4" height="6" width="6" id="af4" fontSize="6"  buttonMode="true"/>
+	<s:Label x="100.8" y="7.35" height="6" width="6" id="eu0" fontSize="6"  buttonMode="true"/>
+	<s:Label x="89.2" y="22.4" height="6" width="6" id="eu1" fontSize="6"  buttonMode="true"/>
+	<s:Label x="112.2" y="17.6" height="6" width="6" id="as0" fontSize="6"  buttonMode="true"/>
+	<s:Label x="112" y="33.4" height="6" width="6" id="as1" fontSize="6"  buttonMode="true"/>
+	<s:Label x="129.4" y="25" height="6" width="6" id="as2" fontSize="6"  buttonMode="true"/>
+	<s:Label x="139.2" y="8.6" height="6" width="6" id="as3" fontSize="6"  buttonMode="true"/>
+	<s:Label x="168.4" y="10" height="6" width="6" id="as4" fontSize="6"  buttonMode="true"/>
+	<s:Label x="151" y="24" height="6" width="6" id="as5" fontSize="6"  buttonMode="true"/>
+	<s:Label x="140.2" y="40.4" height="6" width="6" id="as6" fontSize="6"  buttonMode="true"/>
+	<s:Label x="161" y="37.6" height="6" width="6" id="as7" fontSize="6" buttonMode="true"/>
+	<s:Label x="157.4" y="58.2" height="6" width="6" id="as8" fontSize="6"  buttonMode="true"/>
+	<s:Label x="181.6" y="62" height="6" width="6" id="aus0" fontSize="6" buttonMode="true"/>
+	<s:Label x="167.6" y="78" height="6" width="6" id="aus1" fontSize="6"  buttonMode="true"/>
+	<s:Label x="185.6" y="78.6" height="6" width="6" id="aus2" fontSize="6"  buttonMode="true"/>
+</s:Group>

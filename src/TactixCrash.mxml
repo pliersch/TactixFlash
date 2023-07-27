@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app:TactixApp xmlns:app="base.*" xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:custom="components.*" 
+	backgroundColor="#09CDB4" 
+	layout="vertical" horizontalAlign="center" verticalAlign="middle" xmlns:leveleditor="components.leveleditor.*" >
+	<app:states>
+		<mx:State name="logged">
+			<mx:AddChild position="lastChild">
+				<mx:Canvas horizontalCenter="0" verticalCenter="0">	
+					<custom:overview id="start_screen" horizontalCenter="0" verticalCenter="0"/>
+				</mx:Canvas>	
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="ingame">
+			<mx:AddChild position="lastChild">
+				<custom:game id="game_comp" />
+			</mx:AddChild>
+			<mx:SetProperty name="width"/>
+			<mx:SetProperty name="height"/>
+			<mx:SetProperty name="layout" value="vertical"/>
+		</mx:State>
+		<mx:State name="startscreen">
+			<mx:AddChild position="lastChild">
+				<custom:login id="login_comp" horizontalCenter="0" verticalCenter="0" />
+			</mx:AddChild>
+			<mx:SetProperty name="width"/>
+			<mx:SetProperty name="height"/>
+		</mx:State>
+		<mx:State name="register">
+			<mx:AddChild position="lastChild">
+					<custom:registerform id="register_comp" horizontalCenter="0" verticalCenter="0" />
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="battle">
+			<mx:AddChild  position="lastChild">
+					<custom:BattleWindow id="battle_comp" horizontalCenter="0" verticalCenter="0" />
+			</mx:AddChild>
+		</mx:State>	
+		<mx:State name="levelEditorState">
+			<mx:AddChild position="lastChild">
+				<leveleditor:LevelEditor>
+				</leveleditor:LevelEditor>
+			</mx:AddChild>
+		</mx:State>
+	</app:states>
+	<mx:Producer id="myProducer" destination="chat"  fault="fault(event)" />
+	<mx:Consumer id="myConsumer" destination="chat" fault="fault(event)" message="incomingMessage(event)"/>
+	<mx:RemoteObject id="loginRO" destination="toLogin"/>
+</app:TactixApp>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:custom="components.*"
+				   xmlns:mx="http://www.adobe.com/2006/mxml" 
+				   xmlns:code="http://code.google.com/p/flexlib/">
+	
+	<mx:Script>
+		<![CDATA[
+			import game.battlefield.Battlefield;
+			
+			public function openBattlefield(battlefield:Battlefield):void{
+				battlefield.sprite.x = 40;
+				battlefield.sprite.y = 40;
+				battleCanvas.rawChildren.addChild(battlefield.sprite);
+			}	
+			
+		]]>
+	</mx:Script>
+	
+	<code:DragScrollingCanvas width="100%" height="100%" childrenDoDrag="true" cornerRadius="0" >
+		<mx:Image source="../media/earth/MittelEuropa.jpg"/>
+		<mx:Canvas id="battleCanvas"/>
+		
+	</code:DragScrollingCanvas>
+</mx:Canvas>

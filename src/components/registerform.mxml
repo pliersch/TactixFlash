@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<comp:RegisterForm xmlns:comp="base.*" xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="500" height="300">
+	<mx:Metadata>
+	[Event(name="regValid",type="flash.events.Event")]
+	</mx:Metadata>
+	<mx:Form horizontalCenter="0" verticalCenter="0" width="400" height="200" id="regform">
+		<mx:FormItem label="Name" width="340" id="regformitem1">
+			<mx:TextInput id="regname"  width="160"/>
+		</mx:FormItem>
+		<mx:FormItem label="Password" width="340" id="regformpw">
+			<mx:TextInput id="regpw" displayAsPassword="true"/>
+		</mx:FormItem>
+		<mx:FormItem label="Confirm Password" width="340" id="regformconfirm">
+			<mx:TextInput id="confirmpw" displayAsPassword="true"/>
+		</mx:FormItem>
+		<mx:VBox>
+			<mx:Button label="Register" id="registerMeNow"/>
+		</mx:VBox>
+	</mx:Form>
+</comp:RegisterForm>

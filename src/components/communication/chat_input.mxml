@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<comp:Chat_Input xmlns:comp="base.*" xmlns:mx="http://www.adobe.com/2006/mxml" >
+	<mx:Producer id="myProducer" destination="myChatDest" />
+	<mx:HBox>
+		<mx:ColorPicker id="myColorPicker" selectedColor="0x000000"
+		showTextField="false" width="30" height="30"/>
+		<mx:TextInput id="myMessage" width="350" fontSize="15" maxChars="100"/>
+		<mx:Button id="sendMessage" label="Sende" fontSize="15"/>
+	</mx:HBox>
+</comp:Chat_Input>

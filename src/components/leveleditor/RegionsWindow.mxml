@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:BorderContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 borderVisible="false" xmlns:components="components.*" 
+		 xmlns:code="http://code.google.com/p/flexlib/">
+	<fx:Declarations>
+		<!-- Platzieren Sie nichtvisuelle Elemente (z. B. Dienste, Wertobjekte) hier -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import flexlib.controls.tabBarClasses.SuperTab;
+			
+			import mx.containers.VBox;
+			
+			public function addTab(label:String, region:Region):void {	
+				region.setStyle("closable", true);
+				region.label = label;
+				tabNavi.addChild(region);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<code:SuperTabNavigator width="100%" height="100%" id="tabNavi" paddingTop="0"
+							stopScrollingEvent="{MouseEvent.MOUSE_UP}" 
+							startScrollingEvent="{MouseEvent.MOUSE_DOWN}"
+							scrollSpeed="25" closePolicy="{SuperTab.CLOSE_SELECTED}" >
+<!--		<s:NavigatorContent label="NA0" id="na0" width="100%" height="100%">
+			<code:DragScrollingCanvas id="dragCanvas"
+										 width="100%" height="100%"
+										 childrenDoDrag="true" cornerRadius="0">
+				<mx:Image source="../media/earth/Amerika Alaska.jpg"/>
+				<mx:Canvas id="canvasNA0">
+				</mx:Canvas>
+				<mx:Canvas id="canvasNA0Street">
+				</mx:Canvas>
+			</code:DragScrollingCanvas>
+		</s:NavigatorContent>-->
+	</code:SuperTabNavigator>
+</s:BorderContainer>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<comp:Game xmlns:custom="components.*" xmlns:comp="base.*" xmlns:mx="http://www.adobe.com/2006/mxml" backgroundColor="0" currentState="world">	  	
+	<comp:states>
+		<mx:State name="battle">
+			<mx:RemoveChild target="{worldCanvas}"/>
+			<mx:AddChild position="lastChild">
+				<custom:BattleWindow id="battleWindow" width="1024" height="587">
+				</custom:BattleWindow>
+			</mx:AddChild>
+			<mx:AddChild position="lastChild">
+				<mx:Button x="478.25" y="13" label="EndTurn" id="endturnBtn"/>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="world"/>
+	</comp:states>
+	<custom:console id="console_comp" y="588" x="0"> </custom:console>
+	<mx:Canvas id="worldCanvas" width="1024" y="0" height="587">
+	</mx:Canvas>
+</comp:Game>

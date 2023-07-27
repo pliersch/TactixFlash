@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<comp:Console xmlns:comp="base.*" xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:custom="components.*" 
+	width="1024" height="134" backgroundColor="#000000">
+	<mx:ViewStack id="viewstack1" width="379" height="84" x="327" y="10">
+		<mx:Canvas id="bgBlau">
+		<mx:Image source="../media/hq/KonsoleBGBlau.png" width="379">
+		</mx:Image>
+		<mx:Text x="10" y="10" text="Text" id="gameName" color="#B2B2B2" fontSize="14"/>
+		<mx:Text x="10" y="41" text="Text" id="welcomeTxt" color="#B2B2B2"/>
+		</mx:Canvas>
+		<mx:Canvas id="bgRot">
+		<mx:Image source="../media/hq/KonsoleBGRed.png">
+		</mx:Image>
+		</mx:Canvas>
+		<mx:Canvas id="bgGruen">
+		<mx:Image source="../media/hq/KonsoleBGGruen.png">
+		</mx:Image>
+		</mx:Canvas>
+		<mx:Canvas id="bgGelb">
+		<mx:Image source="../media/hq/KonsoleBGGelb.png">
+		</mx:Image>
+		</mx:Canvas>
+	</mx:ViewStack>
+	<mx:Button label="logout" id="logmeout" x="327" y="111"/>
+	<mx:Button label="Battle" id="battle" x="422" y="111"/>
+	<mx:Button label="Zur Lobby" id="toLobby" x="517" y="111"/>
+	<mx:Button label="Optionen" id="optionBtn" x="612" y="111"/>
+</comp:Console>

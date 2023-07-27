@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties mainApplicationPath="TactixCrash.mxml" projectUUID="daf981b7-024e-47ee-b8da-0cb32903431a" version="6">
+  <compiler additionalCompilerArguments="-services &quot;D:\TFH\MME\Blaze DS\tomcat\webapps\samples\WEB-INF\flex\services-config.xml&quot; -locale en_US" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderLocation="D:/TFH/MME/Blaze DS/tomcat/webapps/samples/TactixCrash-debug" outputFolderPath="bin-debug" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="1">
+      <libraryPathEntry kind="4" path=""/>
+      <libraryPathEntry kind="1" linkType="1" path="libs"/>
+      <libraryPathEntry kind="3" linkType="1" path="D:/FlashBuilder/flexlib - 2.5 - flex4/flexlib.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="D:/TFH/MME/Flash/Regionen.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="D:/TFH/MME/Flash/Kachel.swc" useDefaultLinkType="false"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="TactixCrash.mxml"/>
+  </applications>
+  <modules/>
+  <buildCSSFiles/>
+</actionScriptProperties>

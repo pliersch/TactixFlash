@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:BorderContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="108">
+	<fx:Declarations>
+		<!-- Platzieren Sie nichtvisuelle Elemente (z. B. Dienste, Wertobjekte) hier -->
+	</fx:Declarations>
+	<s:HGroup width="335" height="30" verticalAlign="middle" gap="5" x="35" y="12">
+		<s:Button label="Sound" width="80" id="soundBtn"/>
+		<s:Button label="Fullscreen" width="80" id="fullScreenBtn"/>
+		<s:Button label="Help" width="80" id="helpBtn"/>
+		<s:Button label="Sprache" width="80" id="languageBtn"/>
+	</s:HGroup>
+	<s:HSlider x="37" y="51" width="331" id="soundSlider"/>
+</s:BorderContainer>

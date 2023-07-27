@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:BorderContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 borderVisible="false" xmlns:components="components.*" 
+		 xmlns:code="http://code.google.com/p/flexlib/"
+		  >
+	<fx:Declarations>
+		<!-- Platzieren Sie nichtvisuelle Elemente (z. B. Dienste, Wertobjekte) hier -->
+	</fx:Declarations>
+	
+<!--	<fx:Style source="css/SuperTabStyles.css"/>-->
+	
+	<fx:Script>
+		<![CDATA[
+			
+			import flexlib.controls.tabBarClasses.SuperTab;
+			
+			import mx.containers.Canvas;
+			import mx.containers.VBox;
+			import mx.controls.Alert;
+			
+			import spark.components.Label;
+			import spark.components.NavigatorContent;
+			
+			public function addTab(lbl:String):void {
+				if(lbl=="") lbl = "(Untitled)";
+				var child:VBox = new VBox();	
+				child.setStyle("closable", true);
+				child.name = lbl;
+				child.label = lbl;
+				var chat:ChatComp = new ChatComp();
+				child.addChild(chat);
+				nav.addChild(child);
+			}
+			
+			public function addMessageComp(userName:String, stratusID:String):void{
+				var vbox:VBox = nav.getChildByName(userName) as VBox;
+				if(vbox != null && vbox.name == userName){
+					nav.selectedIndex = nav.getChildIndex(vbox);
+				} else {
+					addTab(userName);
+				}
+			}
+		]]>
+	</fx:Script>
+	
+	<code:SuperTabNavigator id="nav" scrollSpeed="25"
+							  stopScrollingEvent="{MouseEvent.MOUSE_UP}" startScrollingEvent="{MouseEvent.MOUSE_DOWN}"
+							  width="100%" height="100%" horizontalGap="0" tabStyleName="SuperTabStyles" 
+							  closePolicy="{SuperTab.CLOSE_SELECTED}">
+	</code:SuperTabNavigator>
+</s:BorderContainer>

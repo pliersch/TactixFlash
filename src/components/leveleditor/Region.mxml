@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:VBox xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" 
+				xmlns:code="http://code.google.com/p/flexlib/" 
+				creationComplete="init(event)">
+	<fx:Declarations>
+		<!-- Platzieren Sie nichtvisuelle Elemente (z. B. Dienste, Wertobjekte) hier -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.containers.Canvas;
+			import mx.controls.Image;
+			import mx.events.FlexEvent;
+			
+			private var bgContainer:Sprite;
+			//private var fieldContainer:Sprite;
+			private var roadContainer:Sprite;
+			private var hexFields:Vector.<Vector.<Field>>;
+			
+			private function init(e:FlexEvent):void {
+				
+				//backgroundImage.setStyle("source","../media/earth/MittelEuropa.jpg");
+				//setBackgroundImage();
+				
+//				roadContainer = new Sprite();
+//				
+//				rawChildren.addChild(fieldContainer);
+//				rawChildren.addChild(roadContainer);
+			}
+			
+			public function setBackgroundImage():void {
+
+			}
+			
+			public function addFields(container:Sprite):void {
+				container.x = 40;
+				container.y = 40;
+				fieldContainer.rawChildren.addChild(container);
+			}
+			
+			
+		]]>
+	</fx:Script>	
+	<code:DragScrollingCanvas id="scrollingCanvas" width="100%" height="100%" childrenDoDrag="true" cornerRadius="0">
+		<mx:Image id="backgroundImage" source="../media/earth/MittelEuropa.jpg" />
+		<mx:Canvas id="fieldContainer"/>
+		<mx:Canvas id="streetContainer" />
+	</code:DragScrollingCanvas>
+</mx:VBox>

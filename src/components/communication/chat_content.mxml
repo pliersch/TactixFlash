@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<comp:Chat_Content xmlns:comp="base.*" xmlns:mx="http://www.adobe.com/2006/mxml">
+	<mx:Consumer id="myConsumer" destination="myChatDest" />
+	<mx:Repeater id="chatRepeater" dataProvider="{repeaterCollection}">
+		<mx:Label text="{chatRepeater.currentItem.text.toString()}" y="{20 * chatRepeater.currentIndex}" fontSize="15" color="{chatRepeater.currentItem.color.toString()}" width="100%"/>
+	</mx:Repeater>
+</comp:Chat_Content>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<comp:UserList xmlns:comp="base.*" xmlns:mx="http://www.adobe.com/2006/mxml">
+	<mx:DataGrid dataProvider="{userList}" height="100%" width="250">
+		<mx:columns>
+		<mx:Array>
+			<mx:DataGridColumn dataField="name" headerText="Benutzer" />
+		</mx:Array>
+		</mx:columns>
+	</mx:DataGrid>
+<mx:Consumer id="myConsumer" destination="myUserlistDest"/>
+</comp:UserList>

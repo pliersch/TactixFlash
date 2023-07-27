@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<comp:Login xmlns:comp="base.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="1024" height="768">
+<mx:Metadata>
+	[Event(name="regPressed",type="flash.events.Event")]
+	[Event(name="loginValid",type="flash.events.Event")]
+</mx:Metadata>
+	<mx:RemoteObject id="loginRO" destination="toLogin"/>
+		<mx:TextInput x="514" y="403" id="logname" dropShadowVisible="false" borderColor="#FFFFFF" color="#000000"/>
+		<mx:TextInput x="514" y="426" displayAsPassword="true" id="logpw" borderColor="#FFFFFF" color="#000000" contentBackgroundColor="#FFFFFF"/>
+		<mx:Button label="Log In" id="logBtn" x="526" y="463"/>
+		<mx:Button label="Register" id="regBtn" y="463" x="415"/>
+	
+	<mx:Button label="Alpha" id="player1" color="#FFFF00" x="359" y="331"/>
+	<mx:Button label="Beta" id="player2" color="#00FF00" x="438" y="331"/>
+	<mx:Button label="Gamma" id="player3" color="#0000FF" x="516" y="331"/>
+	<mx:Button label="Delta" id="player4" color="#FF0000" x="594" y="331"/>
+	
+</comp:Login>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:BorderContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 implements="designPattern.observer.IObserver"
+		 creationComplete="init(event)" borderVisible="false" width="100%" height="100%">
+	<s:layout>
+		<s:VerticalLayout horizontalAlign="center"/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Platzieren Sie nichtvisuelle Elemente (z. B. Dienste, Wertobjekte) hier -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import core.MyUser;
+			import core.onlineStatus.P2P_Manager;
+			
+			import designPattern.observer.IObservable;
+			import designPattern.observer.IObserver;
+			
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			import mx.messaging.events.MessageFaultEvent;
+
+			private var _p2pManager:P2P_Manager;
+			private var _myUser:MyUser;
+			
+			private function init(e:FlexEvent):void{
+				_myUser = MyUser.instance;
+				_p2pManager = P2P_Manager.instance;
+				_p2pManager.addObserver(this);
+				sendBtn.addEventListener(MouseEvent.CLICK, sendMessageHandler);
+				messageTxt.addEventListener(KeyboardEvent.KEY_DOWN, enterPressed);
+			}
+			
+			private function sendMessageHandler(e:MouseEvent) : void {
+				if(messageTxt.text != "") {
+					sendMessage(messageTxt.text);
+					messageTxt.text = "";
+				}
+			}
+			
+			public function update(observerable:IObservable, infoObj:Object):void {
+				// fehler, observerable ist ObservableSubject
+				//if(observerable is PeerManager){
+				if(infoObj is String){
+					getMessage(infoObj as String);
+				}
+			}
+			
+			private function enterPressed(e:KeyboardEvent) : void {
+				if(e.keyCode == Keyboard.ENTER){
+					if(messageTxt.text != "") {
+						sendMessage(messageTxt.text);
+						messageTxt.text = "";
+					}
+				}
+			}
+			public function getMessage(message:String):void{
+				chatOutput.appendText(message);
+			}
+			
+			private function sendMessage(message:String):void{
+				_p2pManager.sendObject(_myUser.name + " : " + message +"\n" );
+				chatOutput.appendText(_myUser.name + " : " + message +"\n" );
+			}	
+			
+			private function fault(event:MessageFaultEvent) : void {
+				mx.controls.Alert.show("FAULT: " + event.toString());
+			}
+		]]>
+	</fx:Script>
+	<mx:Spacer/>
+		<s:TextArea width="95%" height="90%" id="chatOutput" editable="false"/>	
+	<s:HGroup x="10" y="10" width="95%">	
+		<s:TextInput x="10" y="468" width="100%" id="messageTxt"/>
+		<s:Button x="320" y="468" label="send" width="50" id="sendBtn"/>
+	</s:HGroup>
+</s:BorderContainer>
